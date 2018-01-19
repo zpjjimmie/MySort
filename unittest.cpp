@@ -1,9 +1,5 @@
 #include "HeapSort.h"
-
-int main()
-{
-	test_heapsort();
-}
+#include "QuickSort.h"
 
 void test_heapsort()
 {
@@ -36,5 +32,18 @@ void test_heapsort()
 
 void test_quicksort()
 {
+	std::vector<int> sortlist = { 1,5,3,100,3,2,5,6,7,8,19,10 };
+	QuickSort<int> quicksort(10000);
+	quicksort.init(sortlist);
+	quicksort.print();
+	std::cout << "---------------------" << std::endl;
+	quicksort.sort();
+	quicksort.print();
+	std::cout << "---------------------" << std::endl;
+}
 
+int main()
+{
+	//test_heapsort();
+	test_quicksort();
 }
