@@ -6,6 +6,8 @@
 			如果一次遍历中没有交换位置，则排序完成
 */
 
+#include "common.h"
+
 template<typename T>
 class BubbleSort
 {
