@@ -71,8 +71,7 @@ void MergeSort<T>::sort_recursive(int start, int end)
 	if (start >= end)
 		return;
 
-	int len = end - start + 1;
-	int mid = start + len / 2 - 1;
+	int mid = (start + end) / 2;
 
 	// 存储开始结束标记
 	int start1 = start;
