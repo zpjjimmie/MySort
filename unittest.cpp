@@ -2,6 +2,7 @@
 #include "QuickSort.h"
 #include "MergeSort.h"
 #include "InsertSort.h"
+#include "BubbleSort.h"
 
 void test_heapsort()
 {
@@ -65,10 +66,20 @@ void test_insertsort()
 	insertsort.print();
 }
 
+void test_bubblesort()
+{
+	std::vector<int> sortlist = { 1,5,3,100,3,2,5,6,7,8,19,10 };
+	BubbleSort<int> bubblesort(100);
+	bubblesort.init(sortlist);
+	bubblesort.sort();
+	bubblesort.print();
+}
+
 int main()
 {
 	//test_heapsort();
 	//test_quicksort();
 	//test_mergesort();
-	test_insertsort();
+	//test_insertsort();
+	test_bubblesort();
 }
