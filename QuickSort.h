@@ -8,7 +8,6 @@
 
 #include "common.h"
 
-// T为支持随机存储的容器,如vector
 template<typename T>
 class QuickSort
 {
@@ -66,7 +65,7 @@ void QuickSort<T>::sort()
 template<typename T>
 void QuickSort<T>::sort_recursive(int start, int end)
 {
-	if (start >= end || end <= 0)
+	if (start >= end)
 		return;
 
 	T& pivot = m_sortlist[end];	// 基准值

@@ -1,5 +1,6 @@
 #include "HeapSort.h"
 #include "QuickSort.h"
+#include "MergeSort.h"
 
 void test_heapsort()
 {
@@ -42,8 +43,21 @@ void test_quicksort()
 	std::cout << "---------------------" << std::endl;
 }
 
+void test_mergesort()
+{
+	std::vector<int> sortlist = { 1,5,3,100,3,2,5,6,7,8,19,10 };
+	MergeSort<int> mergesort(10000);
+	mergesort.init(sortlist);
+	mergesort.print();
+	std::cout << "---------------------" << std::endl;
+	mergesort.sort();
+	mergesort.print();
+	std::cout << "---------------------" << std::endl;
+}
+
 int main()
 {
 	//test_heapsort();
-	test_quicksort();
+	//test_quicksort();
+	test_mergesort();
 }
